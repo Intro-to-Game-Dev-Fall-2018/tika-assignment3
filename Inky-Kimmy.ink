@@ -1,5 +1,6 @@
 VAR bag = 0
 VAR person = -1
+VAR gamecount = 0
 
 The next day, you go to Kimmy's house
 Kimmy is standing on the porch
@@ -129,28 +130,209 @@ Dana: It’s ok! Kimmy, let’s run to the store and buy some game pieces! We’
 -> VisitFriends
 
 =DiceGame
-{person:
--0: ->ThankJimmy
--1: ->ThankDonna
-}
+Dana: Okay, let's play Yahtzee then...
+-> Yahtzee
+
+=Yahtzee
+Okay, I'll teach you how to play Yahtzee.
++[You need a twenty-sided die] You need a twenty-sided die
+->Yahtzee2
++[You need 100 dice] You need 100 dice
+->Yahtzee2
++[You need five dice] You need five dice
+~gamecount += 1
+->Yahtzee2
+
+=Yahtzee2
+Then, you have 
++[lots of ways to roll dice, but only some are quiet.] lots of ways to roll dice, but only some are quiet.
+->Yahtzee3
++[five ways to toss the dice at your friend.] five ways to toss the dice at your friend.
+->Yahtzee3
++[13 combinations of dice that you want to roll.] 13 combinations of dice that you want to roll.
+~gamecount += 1
+->Yahtzee3
+
+=Yahtzee3
+Now, you
++[take turns rolling the dice. Add them up to get points from certain combinations.]
+take turns rolling the dice. Add them up to get points from certain combinations.
+~gamecount += 1
+->Yahtzee4
++[get points if you roll the dice and they don't make a sound.]get points if you roll the dice and they don't make a sound.
+->Yahtzee4
++[get points if you catch the dice when your friend tries to roll them.]get points if you catch the dice when your friend tries to roll them.
+->Yahtzee4
+
+=Yahtzee4
+You win if
++[you caught the most dice!]you caught the most dice!
+->Evaluate
++[you rolled the quietest dice!]you rolled the quietest dice!
+->Evaluate
++[you scored the most points!]you scored the most points!
+~gamecount += 1
+->Evaluate
 
 =RopeGame
-{person:
--0: ->ThankJimmy
--1: ->ThankDonna
-}
+Okay, let's try tug-of-war then... 
+-> Rope1
+
+=Rope1
+Okay, I'll teach you how to play tug-of-war.
++[You need a rope and a ribbon.]You need a rope and a ribbon.
+~gamecount += 1
+->Rope2
++[You need a rope and puddles.] You need a rope and puddles.
+->Rope2
++[You need a rope and a staircase.] You need a rope and a staircase.
+->Rope2
+
+=Rope2
+Then,
++[you each hold one end of the rope on a different side of the puddle.] you each hold one end of the rope on a different side of the puddle.
+->Rope3
++[tie a ribbon around the middle of the rope, and mark the ground with two parallel goal lines.] tie a ribbon around the middle of the rope, and mark the ground with two parallel goal lines.
+~gamecount +=1
+->Rope3
++[you each hold one end of the rope, one at the top of the stairs and one at the bottom.] you each hold one end of the rope, one at the top of the stairs and one at the bottom.
+->Rope3
+
+=Rope3
+Now,
++[the friend at the bottom of the stairs ties the rope around their waist.] 
+->Rope4
++[you try to pull each other into the puddle using the rope.]
+->Rope4
++[you can each hold one end of the rope, and tug as hard as you can.]
+~gamecount += 1
+->Rope4
+
+=Rope4
+You win if you
++[can pull the other friend to the top of the stairs using the rope] can pull the other friend to the top of the stairs using the rope
+->Evaluate
++[can pull your friend into the puddle] can pull your friend into the puddle
+->Evaluate
++[can pull the rope's ribbon across your side, where the marking's closest to you]can pull the rope's ribbon across your side, where the marking's closest to you 
+~gamecount += 1
+->Evaluate
 
 =ChalkGame
+Dana: Okay, let's play hopscotch then... 
+-> HopScotch
+
+=HopScotch
+Dana: Okay, I'll teach you how to play hopscotch.
++[You need chalk and a rock.] You need chalk and a rock.
+~gamecount += 1
+-> HopScotch2
++[You need chalk and snacks.] You need chalk and snacks.
+-> HopScotch2
++[You need chalk and eggs.] You need chalk and eggs.
+-> HopScotch2
+
+= HopScotch2
+Dana: Then, 
++[count how many snacks you have and draw that many squares in a column using your chalk.] count how many snacks you have and draw that many squares in a column using your chalk.
+-> HopScotch3
++[use your chalk to draw ten squares all in a column, with some rows containing two squares.] use your chalk to draw ten squares all in a column, with some rows containing two squares.
+~gamecount += 1
+-> HopScotch3
++[put the eggs on the ground and draw small squares around them] put the eggs on the ground and draw small squares around them 
+-> HopScotch3
+
+= HopScotch3
+Dana: Now
++[each player takes turns hopping through the egg squares, trying not to squash them.] each player takes turns hopping through the egg squares, trying not to squash them.
+-> HopScotch4
++[everyone hops through the squares all at once, trying to pick up snacks] everyone hops through the squares all at once, trying to pick up snacks
+-> HopScotch4
++[toss the rock into a square and hop to the other end of the column, picking it up on your way back.]toss the rock into a square and hop to the other end of the column, picking it up on your way back.
+~gamecount += 1
+-> HopScotch4
+
+= HopScotch4
+Dana: You win if you
++[finish ten turns without breaking more than one egg.] finish ten turns without breaking more than one egg.
+-> Evaluate
++[pick up the most snacks.] pick up the most snacks.
+-> Evaluate
++[pick up the rock without falling or tossing it outside of the column ten times.]pick up the rock without falling or tossing it outside of the column ten times.
+~gamecount += 1
+->Evaluate
+
+=Evaluate
+{gamecount:
+-4: 
+~gamecount = 0
+->EndGame
+-3:~gamecount = 0
+->Wrong
+-2: ~gamecount = 0
+->Wrong
+-1: ~gamecount = 0
+->Wrong
+-0: ~gamecount = 0
+->Wrong
+}
+
+= Wrong
+Really? Are you sure you know how to play?
++[Try Again] -> CheckBag
+
+=EndGame
+Okay, that makes sense! 
++[One hour later]-> Play
+
+= Play
 {person:
 -0: ->ThankJimmy
 -1: ->ThankDonna
 }
 
 =PaperGame
-{person:
--0: ->ThankJimmy
--1: ->ThankDonna
-}
+Okay, let's try tic-tac-toe then... ->Paper1
+
+=Paper1
+Okay, I'll teach you how to play tic-tac-toe
++[You need to draw a dog] You need to draw a dog
+->Paper2
++[You need to draw a grid]You need to draw a grid
+~gamecount += 1
+->Paper2
++[You need to draw a heart] You need to draw a heart
+->Paper2
+
+=Paper2
+Then, you
++[draw cookies and the other draws cakes] draw cookies and the other draws cakes
+->Paper3
++[draw X's, and the other draws O's] draw X's, and the other draws O's
+~gamecount += 1
+->Paper3
++[each draw your crush] each draw your crush 
+->Paper3
+
+=Paper3
+Now,
++[take turns drawing your X's and O's]take turns drawing your X's and O's
+~gamecount += 1
+->Paper4
++[draw all your cookies and cakes as fast as you can for ten seconds] draw all your cookies and cakes as fast as you can for ten seconds
+->Paper4
++[your friend guesses who your crush is]your friend guesses who your crush is 
+->Paper4
+
+=Paper4
+You win if you
++[get three of your symbols in a row]get three of your symbols in a row
+~gamecount += 1
+->Evaluate
++[guess your friends crush]guess your friends crush
+->Evaluate
++[drew more cookies or cakes within ten seconds] drew more cookies or cakes within ten seconds
+->Evaluate
 
 = ThankDonna
 Donna: Kimmy loved that.
