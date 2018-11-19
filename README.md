@@ -1,5 +1,8 @@
 # Assignment Links
 
+## [Here's the link to Draft 3](https://ak5352.itch.io/kimmy-clone-draft-3)
+Did next to nothing because I was at Anime NYC ... added the game to Unity.
+
 ## [Here's the link to Draft 2](https://ak5352.itch.io/kimmy-clone-draft-2)
 I added rules of the game to the story. Maybe I'll add the monetary system later if I feel like it, or if necessary.
 
