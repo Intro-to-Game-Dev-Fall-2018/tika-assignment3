@@ -2,9 +2,25 @@
 using UnityEngine.UI;
 using System.Collections;
 using Ink.Runtime;
+using UnityEditor.Experimental.UIElements.GraphView;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
-public class BasicInkExample : MonoBehaviour {
+public class BasicInkExample : MonoBehaviour
+{
+
+	public Font danaFont;
+	public Font kimmyFont;
+	public Font deanFont;
+	public Font jimmyFont;
+	public Font donnaFont;
+	
+	public Sprite danaImage;
+	public Sprite kimmyImage;
+	public Sprite deanImage;
+	public Sprite jimmyImage;
+	public Sprite donnaImage;
+
+	private int fontNum = 0;
 	
 	void Awake () {
 		// Remove the default message
@@ -31,6 +47,33 @@ public class BasicInkExample : MonoBehaviour {
 			string text = story.Continue ();
 			// This removes any white space from the text.
 			text = text.Trim();
+
+			if (text.Contains("Dana:"))
+			{
+				fontNum = 1;
+			}
+			
+			if (text.Contains("Kimmy:"))
+			{
+				fontNum = 2;
+			}
+			
+			if (text.Contains("Donna:"))
+			{
+				fontNum = 3;
+			}
+			
+			if (text.Contains("Jimmy:"))
+			{
+				fontNum = 4;
+			}
+			
+			if (text.Contains("Dean:"))
+			{
+				fontNum = 5;
+			}
+			
+			
 			// Display the text on screen!
 			CreateContentView(text);
 		}
@@ -64,8 +107,47 @@ public class BasicInkExample : MonoBehaviour {
 	// Creates a button showing the choice text
 	void CreateContentView (string text) {
 		Text storyText = Instantiate (textPrefab) as Text;
+		Image storyImage = Instantiate(imagePrefab) as Image;
+		
 		storyText.text = text;
+		
+		if (fontNum == 1)
+		{
+			storyText.font = danaFont;
+			storyImage.sprite = danaImage;
+			fontNum = 0;
+		}
+		
+		if (fontNum == 2)
+		{
+			storyText.font = kimmyFont;
+			storyImage.sprite = kimmyImage;
+			fontNum = 0;
+		}
+		
+		if (fontNum == 3)
+		{
+			storyText.font = donnaFont;
+			storyImage.sprite = donnaImage;
+			fontNum = 0;
+		}
+		
+		if (fontNum == 4)
+		{
+			storyText.font = jimmyFont;
+			storyImage.sprite = jimmyImage;
+			fontNum = 0;
+		}
+		
+		if (fontNum == 5)
+		{
+			storyText.font = deanFont;
+			storyImage.sprite = deanImage;
+			fontNum = 0;
+		}
+		
 		storyText.transform.SetParent (canvas.transform, false);
+		storyImage.transform.SetParent (canvas.transform, false);
 	}
 
 	// Creates a button showing the choice text
@@ -77,6 +159,8 @@ public class BasicInkExample : MonoBehaviour {
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
+
+		
 
 		// Make the button expand to fit the text
 		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
@@ -105,4 +189,6 @@ public class BasicInkExample : MonoBehaviour {
 	private Text textPrefab;
 	[SerializeField]
 	private Button buttonPrefab;
+	[SerializeField]
+	private Image imagePrefab;
 }
