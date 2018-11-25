@@ -1,6 +1,6 @@
 # Assignment Links
 
-## [Here's the link to Draft 4] (https://ak5352.itch.io/kimmy-clone-draft-4)
+## [Here's the link to Draft 4](https://ak5352.itch.io/kimmy-clone-draft-4)
 Separated the text by character and added different fonts and images. 
 
 ## [Here's the link to Draft 3](https://ak5352.itch.io/kimmy-clone-draft-3)
