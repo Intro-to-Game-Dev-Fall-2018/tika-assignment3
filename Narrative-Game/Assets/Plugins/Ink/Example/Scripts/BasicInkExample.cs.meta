@@ -5,14 +5,20 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - danaFont: {fileID: 12800000, guid: 5e4c6441aa713ae42815fd65ce6e8208, type: 3}
-  - kimmyFont: {fileID: 12800000, guid: b0c964021a667554ab3e88cc681c3646, type: 3}
+  - kimmyFont: {fileID: 12800000, guid: 6df14f024928b45428bcdaf8359d73e6, type: 3}
   - deanFont: {fileID: 12800000, guid: 4b0ad56c0a499ee40ab9ec669ec7dc30, type: 3}
-  - jimmyFont: {fileID: 12800000, guid: 6df14f024928b45428bcdaf8359d73e6, type: 3}
+  - jimmyFont: {fileID: 12800000, guid: b0c964021a667554ab3e88cc681c3646, type: 3}
   - donnaFont: {instanceID: 0}
+  - danaImage: {instanceID: 0}
+  - kimmyImage: {instanceID: 0}
+  - deanImage: {instanceID: 0}
+  - jimmyImage: {instanceID: 0}
+  - donnaImage: {instanceID: 0}
   - inkJSONAsset: {instanceID: 0}
   - canvas: {instanceID: 0}
   - textPrefab: {instanceID: 0}
   - buttonPrefab: {instanceID: 0}
+  - imagePrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

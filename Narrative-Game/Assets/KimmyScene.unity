@@ -633,10 +633,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danaFont: {fileID: 12800000, guid: 5e4c6441aa713ae42815fd65ce6e8208, type: 3}
-  kimmyFont: {fileID: 12800000, guid: b0c964021a667554ab3e88cc681c3646, type: 3}
+  kimmyFont: {fileID: 12800000, guid: 6df14f024928b45428bcdaf8359d73e6, type: 3}
   deanFont: {fileID: 12800000, guid: 8d8da8720b908924ba8d5cb58d0469f4, type: 3}
-  jimmyFont: {fileID: 12800000, guid: 6df14f024928b45428bcdaf8359d73e6, type: 3}
-  donnaFont: {fileID: 12800000, guid: a5f72e3c6b4707e4cb5bd91c3f07b9e3, type: 3}
+  jimmyFont: {fileID: 12800000, guid: b0c964021a667554ab3e88cc681c3646, type: 3}
+  donnaFont: {fileID: 12800000, guid: b0c964021a667554ab3e88cc681c3646, type: 3}
   danaImage: {fileID: 21300000, guid: 2ed01471ba4455f449018aa87036ddf1, type: 3}
   kimmyImage: {fileID: 21300000, guid: cc7cab117bc83714181d73c497b45280, type: 3}
   deanImage: {fileID: 21300000, guid: 8525199851eb5944788cfdfee2a5e270, type: 3}
