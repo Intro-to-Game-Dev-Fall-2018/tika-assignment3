@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5c6ee41268b90f04a9978945cfd3dbb1
+guid: 13c3d82e01d366a469bf8918a7289ab4
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Arsenale White
+  fontName: Gloria Hallelujah
   fontNames:
-  - Arsenale White
+  - Gloria Hallelujah
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

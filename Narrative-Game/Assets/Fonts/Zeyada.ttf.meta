@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5f72e3c6b4707e4cb5bd91c3f07b9e3
+guid: 842f8d908d87b474886428488c599bd1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Daisy Rae
+  fontName: Zeyada
   fontNames:
-  - Daisy Rae
+  - Zeyada
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

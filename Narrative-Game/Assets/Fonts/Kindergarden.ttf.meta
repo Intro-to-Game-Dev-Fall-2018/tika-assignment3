@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b0ad56c0a499ee40ab9ec669ec7dc30
+guid: 027d35093cc02834da39f14390b90e07
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Hand Center
+  fontName: Kindergarden
   fontNames:
-  - Hand Center
+  - Kindergarden
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

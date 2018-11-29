@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0c964021a667554ab3e88cc681c3646
+guid: ca71bf052becd594388cf1e7fb06240f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Child Writing
+  fontName: Indie Flower
   fontNames:
-  - Child Writing
+  - Indie Flower
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

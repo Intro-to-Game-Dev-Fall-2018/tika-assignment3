@@ -19,11 +19,22 @@ public class BasicInkExample : MonoBehaviour
 	public Sprite jimmyImage;
 	public Sprite donnaImage;
 
-	private int fontNum = 0;
+	private AudioSource myAudioSource;
+	public AudioClip sound1;
+	public AudioClip sound2;
+	
+	private int fontNum;
+
+	private int count;
 	
 	void Awake () {
 		// Remove the default message
 		RemoveChildren();
+		
+		myAudioSource = GetComponent<AudioSource>();
+		fontNum = 0;
+		count = 0;
+		
 		StartStory();
 	}
 
@@ -85,7 +96,10 @@ public class BasicInkExample : MonoBehaviour
 				// Tell the button what to do when we press it
 				button.onClick.AddListener (delegate {
 					OnClickChoiceButton (choice);
+					
 				});
+				
+				
 			}
 		}
 		// If we've read all the content and there's no choices, the story is finished!
@@ -98,7 +112,22 @@ public class BasicInkExample : MonoBehaviour
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
-	void OnClickChoiceButton (Choice choice) {
+	void OnClickChoiceButton (Choice choice)
+	{
+		count++;
+
+		if (count % 2 == 0)
+		{
+			myAudioSource.clip = sound2;
+		}
+
+		else
+		{
+			myAudioSource.clip = sound1;
+		}  
+		
+		myAudioSource.Play();
+		
 		story.ChooseChoiceIndex (choice.index);
 		RefreshView();
 	}
