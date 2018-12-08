@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Linq;
 using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class BasicInkExample : MonoBehaviour
@@ -19,13 +22,21 @@ public class BasicInkExample : MonoBehaviour
 	public Sprite jimmyImage;
 	public Sprite donnaImage;
 
+	public Sprite houseImage;
+	public Sprite playgroundImage;
+	public Sprite neighborhoodImage;
+	public Sprite storeImage;
+
 	private AudioSource myAudioSource;
-	public AudioClip sound1;
-	public AudioClip sound2;
+	public AudioClip danaSound;
+	public AudioClip kimmySound;
+	public AudioClip jimmySound;
+	public AudioClip donnaSound;
+	public AudioClip deanSound;
+	public AudioClip mainMenuSound;
 	
 	private int fontNum;
-
-	private int count;
+	private int backgroundNum;
 	
 	void Awake () {
 		// Remove the default message
@@ -33,7 +44,6 @@ public class BasicInkExample : MonoBehaviour
 		
 		myAudioSource = GetComponent<AudioSource>();
 		fontNum = 0;
-		count = 0;
 		
 		StartStory();
 	}
@@ -60,27 +70,42 @@ public class BasicInkExample : MonoBehaviour
 
 			if (text.Contains("Dana:"))
 			{
+				String result = text.Replace("Dana:", "");
+				text = result;
 				fontNum = 1;
+				myAudioSource.clip = danaSound;
 			}
 			
 			if (text.Contains("Kimmy:"))
 			{
+				String result = text.Replace("Kimmy:", "");
+				text = result;
 				fontNum = 2;
+				myAudioSource.clip = kimmySound;
 			}
 			
 			if (text.Contains("Donna:"))
 			{
+				String result = text.Replace("Donna:", "");
+				text = result;
 				fontNum = 3;
+				myAudioSource.clip = donnaSound;
 			}
 			
 			if (text.Contains("Jimmy:"))
 			{
+				String result = text.Replace("Jimmy:", "");
+				text = result;
 				fontNum = 4;
+				myAudioSource.clip = jimmySound;
 			}
 			
 			if (text.Contains("Dean:"))
 			{
+				String result = text.Replace("Dean:", "");
+				text = result;
 				fontNum = 5;
+				myAudioSource.clip = deanSound;
 			}
 			
 			
@@ -91,8 +116,10 @@ public class BasicInkExample : MonoBehaviour
 		// Display all the choices, if there are any!
 		if(story.currentChoices.Count > 0) {
 			for (int i = 0; i < story.currentChoices.Count; i++) {
-				Choice choice = story.currentChoices [i];
+				Choice choice = story.currentChoices[i];
+				
 				Button button = CreateChoiceView (choice.text.Trim ());
+				
 				// Tell the button what to do when we press it
 				button.onClick.AddListener (delegate {
 					OnClickChoiceButton (choice);
@@ -104,27 +131,30 @@ public class BasicInkExample : MonoBehaviour
 		}
 		// If we've read all the content and there's no choices, the story is finished!
 		else {
-			Button choice = CreateChoiceView("End of story.\nRestart?");
-			choice.onClick.AddListener(delegate{
-				StartStory();
-			});
+			SceneManager.LoadScene("Ending");
 		}
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton (Choice choice)
 	{
-		count++;
-
-		if (count % 2 == 0)
+		myAudioSource.clip = mainMenuSound;
+		myAudioSource.Play();
+		
+		if (choice.text.Contains("Neighborhood:"))
 		{
-			myAudioSource.clip = sound2;
+			backgroundNum = 1;
 		}
-
-		else
+		
+		if (choice.text.Contains("Playground:"))
 		{
-			myAudioSource.clip = sound1;
-		}  
+			backgroundNum = 2;
+		}
+		
+		if (choice.text.Contains("Store:"))
+		{
+			backgroundNum = 3;
+		}
 		
 		myAudioSource.Play();
 		
@@ -136,6 +166,8 @@ public class BasicInkExample : MonoBehaviour
 	void CreateContentView (string text) {
 		Text storyText = Instantiate (textPrefab) as Text;
 		Image storyImage = Instantiate(imagePrefab) as Image;
+		Image backgroundImage = Instantiate(BGimagePrefab) as Image;
+		RectTransform panel = Instantiate(panelPrefab) as RectTransform;
 		
 		storyText.text = text;
 		
@@ -173,9 +205,33 @@ public class BasicInkExample : MonoBehaviour
 			storyImage.sprite = deanImage;
 			fontNum = 0;
 		}
+
+		if (backgroundNum == 0)
+		{
+			backgroundImage.sprite = houseImage;
+		}
 		
+		if (backgroundNum == 1)
+		{
+			backgroundImage.sprite = neighborhoodImage;
+		}
+		
+		if (backgroundNum == 2)
+		{
+			backgroundImage.sprite = playgroundImage;
+		}
+		
+		if (backgroundNum == 3)
+		{
+			backgroundImage.sprite = storeImage;
+		}
+
+		backgroundImage.transform.SetParent (canvas.transform, false);
+		panel.transform.SetParent (canvas.transform, false);
+		StartCoroutine(Breathe(storyText));
 		storyText.transform.SetParent (canvas.transform, false);
 		storyImage.transform.SetParent (canvas.transform, false);
+		
 	}
 
 	// Creates a button showing the choice text
@@ -187,9 +243,7 @@ public class BasicInkExample : MonoBehaviour
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
-
 		
-
 		// Make the button expand to fit the text
 		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
 		layoutGroup.childForceExpandHeight = false;
@@ -202,6 +256,20 @@ public class BasicInkExample : MonoBehaviour
 		int childCount = canvas.transform.childCount;
 		for (int i = childCount - 1; i >= 0; --i) {
 			GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
+		}
+	}
+	
+	private IEnumerator Breathe(Text textPart)
+	{
+		String tmp = textPart.text;
+		
+		for (int i = 0; i <= tmp.Length; i++)
+		{
+			
+			textPart.text = tmp.Substring(0, i);
+			myAudioSource.Play();
+			yield return new WaitForSeconds(.04f);
+			
 		}
 	}
 
@@ -219,4 +287,8 @@ public class BasicInkExample : MonoBehaviour
 	private Button buttonPrefab;
 	[SerializeField]
 	private Image imagePrefab;
+	[SerializeField]
+	private Image BGimagePrefab;
+
+	[SerializeField] private RectTransform panelPrefab;
 }

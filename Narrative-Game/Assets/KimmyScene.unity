@@ -175,6 +175,99 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &644021909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 644021913}
+  - component: {fileID: 644021912}
+  - component: {fileID: 644021911}
+  - component: {fileID: 644021910}
+  m_Layer: 5
+  m_Name: Canvas1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &644021910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644021909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &644021911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644021909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &644021912
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644021909}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &644021913
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644021909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1482195891
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1908123724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,13 +507,27 @@ MonoBehaviour:
   deanImage: {fileID: 21300000, guid: 8525199851eb5944788cfdfee2a5e270, type: 3}
   jimmyImage: {fileID: 21300000, guid: dd23d75ec3a251244826eb14282ac0a6, type: 3}
   donnaImage: {fileID: 21300000, guid: 70cd7acab499eac48af60e125846d4bd, type: 3}
-  sound1: {fileID: 8300000, guid: 3829c95c29288f143b2fb39b481eaf77, type: 3}
-  sound2: {fileID: 8300000, guid: d24bd411dc9e8fb4ea7761e19d58c505, type: 3}
+  houseImage: {fileID: 21300000, guid: f0852f31765cf15479c41a1d28269338, type: 3}
+  playgroundImage: {fileID: 21300000, guid: 47720007845feea488bc9d627413544a, type: 3}
+  neighborhoodImage: {fileID: 21300000, guid: bbb751006bea9f14cb35d89db72ef2f1, type: 3}
+  storeImage: {fileID: 21300000, guid: eaf5bc0d4e2d2bd44992991c93c90aae, type: 3}
+  danaSound: {fileID: 8300000, guid: b9914c570cbb7084d8ac372bf8a14b21, type: 3}
+  kimmySound: {fileID: 8300000, guid: 0adf74af7ce0a1842b498e3203e0e523, type: 3}
+  jimmySound: {fileID: 8300000, guid: 61d52e3a3cf26d14188699677c6e498b, type: 3}
+  donnaSound: {fileID: 8300000, guid: e7996046a22a31848b0ab3da9e90d1a9, type: 3}
+  deanSound: {fileID: 8300000, guid: b7c62721140686c42b862170cd3057f8, type: 3}
+  mainMenuSound: {fileID: 8300000, guid: 7671a515b8c1ccf4389cc397ea5fbb4d, type: 3}
   inkJSONAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
-  canvas: {fileID: 1908123726}
-  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 2}
-  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 2}
-  imagePrefab: {fileID: 114729593793602418, guid: ea524d0a89cf0b94c99b68adedf340aa,
+  canvas: {fileID: 644021912}
+  textPrefab: {fileID: 114324675253942126, guid: 156ba783c0efdfc40b6577cb4d61180b,
+    type: 2}
+  buttonPrefab: {fileID: 114400663952666348, guid: 9db0cbd8e5aeed94eab7d1b17f83f605,
+    type: 2}
+  imagePrefab: {fileID: 114815409605490378, guid: ec4e25722a9f2dd4fb7d2f07d5681487,
+    type: 2}
+  BGimagePrefab: {fileID: 114495121433386554, guid: aaee029ee47ac3c44a9f526ddf321c67,
+    type: 2}
+  panelPrefab: {fileID: 224612744977865964, guid: 28c42b6bf4b922c4782bbfe94d15d207,
     type: 2}
 --- !u!4 &2009679605
 Transform:
@@ -452,7 +559,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 27
+  Priority: 104
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 676.60126

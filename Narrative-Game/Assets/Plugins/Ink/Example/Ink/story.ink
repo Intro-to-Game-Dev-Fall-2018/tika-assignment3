@@ -2,8 +2,7 @@ VAR bag = 0
 VAR person = -1
 VAR gamecount = 0
 
-The next day, you go to Kimmy's house
-Kimmy is standing on the porch
+The next day, you go to Kimmy's house. Kimmy is standing on the porch
 
 + [Talk to Kimmy]
 -> MorningKimmy
@@ -80,14 +79,14 @@ Kimmy: ...!
 
 = VisitFriends
 Where would you like to go?
-+ [Store]
++ [Store:  Playground Neighborhood Call it quits]
 -> VisitStore
 
-+ [Playground] 
++ [Playground:  Neighborhood Call it quits] 
 ~person = 0
 -> MeetJimmy
 
-+[Neighborhood]
++[Neighborhood:  Call it quits]
 ~person = 1
 -> MeetDonna
 
