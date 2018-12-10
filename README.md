@@ -1,5 +1,8 @@
 # Assignment Links
 
+## [Here's the link to Draft 6](https://ak5352.itch.io/kimmy-clone-draft-6)
+Changed the layout and added different audio as well as opening and ending scenes
+
 ## [Here's the link to Draft 5](https://ak5352.itch.io/kimmy-clone-draft-5)
 Changed fonts and experimented with audio.
 
