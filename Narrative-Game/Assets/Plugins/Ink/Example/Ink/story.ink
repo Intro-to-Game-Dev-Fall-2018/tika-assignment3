@@ -43,7 +43,12 @@ Dana: Should we watch TV or something in your house?
 ->MoreSuggestionsA
 
 =MoreSuggestionsA
-Kimmy: We don’t have a TV. My dad is in there too, so we should go play somewhere else. He’s busy.
+Kimmy: We don’t have a TV. 
++[Continue]
+-> MoreSuggestionsA2
+
+=MoreSuggestionsA2
+Kimmy: My dad is in there too, so we should go play somewhere else. He’s busy.
 +[Continue]
 -> MoreSuggestions2
 
@@ -58,7 +63,12 @@ Kimmy: Other kids…?
 ->OtherKids
 
 = OtherKids
-Dana: You know, the neighborhood kids. Like Donna. Isn’t she your age? You’re both going to be in Kindergarten, right?
+Dana: You know, the neighborhood kids. Like Donna. 
++[Continue]
+->OtherKids2
+
+=OtherKids2
+Dana: Isn’t she your age? You’re both going to be in Kindergarten, right?
 +[Continue]
 ->UghDonna
 
@@ -68,7 +78,12 @@ Kimmy: Oh, yeah… I don’t think Donna is my friend though, so she probably wo
 ->EncourageKimmy
 
 =EncourageKimmy
-Dana: Well, let’s go become her friend! There's lots of other kids around, too. Like Anthony. I know him from school. Come on, let’s go!
+Dana: Well, let’s go become her friend! There's lots of other kids around, too. 
++[Continue]
+->EncourageKimmy0
+
+=EncourageKimmy0
+Dana: Like Anthony. I know him from school. Come on, let’s go!
 +[Continue]
 ->LetsGo
 
@@ -79,14 +94,14 @@ Kimmy: ...!
 
 = VisitFriends
 Where would you like to go?
-+ [Store:  Playground Neighborhood Call it quits]
++ [Store                                                 ]
 -> VisitStore
 
-+ [Playground:  Neighborhood Call it quits] 
++ [Playground                                 ] 
 ~person = 0
 -> MeetJimmy
 
-+[Neighborhood:  Call it quits]
++[Neighborhood                       ]
 ~person = 1
 -> MeetDonna
 
@@ -99,7 +114,12 @@ Kimmy: Hi Donna.
 ->MeetDonnaA
 
 =MeetDonnaA
-Donna: What happened, Kimmy? Did you untie yourself from the porch again?
+Donna: What happened, Kimmy?
++[Continue]
+->MeetDonnaA2
+
+=MeetDonnaA2
+Donna: Did you untie yourself from the porch again?
 +[Continue]
 ->MeetDonnaB
 
@@ -114,22 +134,57 @@ Dana: Hi Donna! I’m babysitting Kimmy now, so--
 ->ExplainDonnaA
 
 =ExplainDonnaA
-Donna: So you untied Kimmy from the porch? Better not let her parents catch you.
+Donna: So you untied Kimmy from the porch? 
++[Continue]
+-> ExplainDonnaA2
+
+=ExplainDonnaA2
+Donna: Better not let her parents catch you.
 +[Continue]
 -> ExplainDonna2
 
 =ExplainDonna2
-Dana: First of all, I’m her babysitter. Second, she’s perfectly able to untie herself. She’s too old for that thing now, even her mom thinks so.
+Dana: First of all, I’m her babysitter.
++[Continue]
+-> ExplainDonna20
+
+=ExplainDonna20
+Dana: Second, she’s perfectly able to untie herself. 
++[Continue]
+->ExplainDonna21
+
+=ExplainDonna21
+Dana: She’s too old for that thing now, even her mom thinks so.
 +[Continue]
 ->ExplainDonna2A
 
 =ExplainDonna2A
-Donna: She should probably stay on her porch. We’re the same age, but my mom takes me everywhere so I won’t get lost. I bet Kimmy would get lost if she wandered too far.
+Donna: She should probably stay on her porch. 
++[Continue]
+->ExplainDonna2B
+
+=ExplainDonna2B
+Donna: We’re the same age, but my mom takes me everywhere so I won’t get lost. 
++[Continue]
+->ExplainDonna2C
+
+=ExplainDonna2C
+Donna: I bet Kimmy would get lost if she wandered too far.
 +[Continue]
 ->ChangeSubject
 
 =ChangeSubject
-Dana: I don’t know about that. Anyways, I was just going to ask if you wanna play with us... but I feel like you're being mean to Kimmy.
+Dana: I don’t know about that. 
++[Continue]
+->ChangeSubject1
+
+=ChangeSubject1
+Dana: Anyways, I was just going to ask if you wanna play with us... 
++[Continue]
+->ChangeSubject2
+
+=ChangeSubject2
+Dana: but I feel like you're being mean to Kimmy.
 +[Continue]
 ->ChangeSubjectA
 
@@ -139,12 +194,22 @@ Donna: Oh, no. I'm just being honest!
 -> AskDonna
 
 =AskDonna
-Dana: Ok... well, I hope you two can get along, since you're neighbors... want to play a game with us?
+Dana: Ok... well, I hope you two can get along, since you're neighbors... 
++[Continue]
+->AskDonna1
+
+=AskDonna1
+Dana: ... want to play a game with us?
 +[Continue]
 ->AskDonnaA
 
 =AskDonnaA
-Donna: Well, I’m trying to avoid Harold so it’s probably good to look busy. He keeps trying to tell me that my ears look childish. He is so snobby.
+Donna: Well, I’m trying to avoid Harold so it’s probably good to look busy. 
++[Continue]
+->AskDonnaB
+
+=AskDonnaB
+Donna: He keeps trying to tell me that my ears look childish. He is so snobby.
 +[Continue]
 -> KimmyCompliment
 
@@ -199,7 +264,12 @@ Kimmy: I’ve never read a comic before.
 ->KimmyComicA
 
 =KimmyComicA
-Jimmy: Y-you can borrow one of mine whenever you like, Kimmy! And then we can uh…
+Jimmy: Y-you can borrow one of mine whenever you like, Kimmy!
++[Continue]
+->KimmyComicA1
+
+=KimmyComicA1
+Jimmy: And then we can uh…
 +[Continue]
 ->KimmyComicB
 
@@ -209,7 +279,12 @@ Jimmy: We can talk about it and pick our--our favorite characters!
 ->ComplimentJimmy
 
 =ComplimentJimmy
-Dana: Wow! That’s so nice of you, Jimmy! Guess you have a new friend, Kimmy!
+Dana: Wow! That’s so nice of you, Jimmy! 
++[Continue]
+->ComplimentJimmy1
+
+=ComplimentJimmy1
+Dana: Guess you have a new friend, Kimmy!
 +[Continue]
 ->ComplimentJimmyA
 
@@ -224,7 +299,12 @@ Jimmy: A-anytime, anytime… um…
 -> ProdJimmyMore
 
 =ProdJimmyMore
-Dana: Say, are you free to play a game with us, Jimmy? We’ll teach you something new!
+Dana: Say, are you free to play a game with us, Jimmy? 
++[Continue]
+->ProdJimmyMore1
+
+=ProdJimmyMore1
+Dana: We’ll teach you something new!
 +[Continue]
 ->ProdJimmyMoreA
 
@@ -239,7 +319,12 @@ Dana: I’m teaching Kimmy games and helping her make friends this summer.
 ->EncourageJimmy2A
 
 =EncourageJimmy2A
-Jimmy: If you’re learning games, can I play games with you on the playground sometimes too, Kimmy? Once school starts?
+Jimmy: If you’re learning games, can I play games with you on the playground sometimes too, Kimmy? 
++[Continue]
+-> EncourageJimmy2B
+
+=EncourageJimmy2B
+Jimmy: Once school starts?
 +[Continue]
 -> KimmySpeaksToJimmy
 
@@ -263,7 +348,16 @@ Jimmy: What! Oh! Yes… yes please…
 }
 
 = EmptyBag
-Dana: Oh no! I’m sorry… I thought I had some stuff to play games with in my bag… but it looks like I ran out.
+Dana: Oh no! I’m sorry… 
++[Continue] -> EmptyBag1
+
+=EmptyBag1
+Dana: I thought I had some stuff to play games with in my bag…
++[Continue]
+->EmptyBag2
+
+=EmptyBag2
+Dana: but it looks like I ran out.
 +[Continue]
 ->EmptyBagA
 
@@ -273,7 +367,12 @@ Kimmy: Oh no...
 -> ItsOk
 
 =ItsOk
-Dana: It’s ok! Kimmy, let’s run to the store and buy some game pieces! We’ll be right back!
+Dana: It’s ok! Kimmy, let’s run to the store and buy some game pieces! 
++[Continue]
+-> ItsOk2
+
+=ItsOk2
+We’ll be right back!
 -> VisitFriends
 
 =DiceGame
@@ -494,10 +593,20 @@ Donna: I’m surprised, normally you’re so quiet Kimmy.
 =ThankDonnaB
 Kimmy: Mom said it’s ok to be quiet.
 +[Continue]
-->ItsOk2
+->ItsOk20
 
-=ItsOk2
-Dana: That’s right! Games are a nice way to talk and play with your friends though, don’t you think? Even quiet kids like games, I think, usually.
+=ItsOk20
+Dana: That’s right! 
++[Continue]
+->ItsOk21
+
+=ItsOk21
+Dana: Games are a nice way to talk and play with your friends though, don’t you think?
++[Continue]
+->ItsOk22
+
+=ItsOk22
+Dana: Even quiet kids like games, I think, usually.
 +[Continue]
 ->ItsOk2A
 
@@ -507,7 +616,12 @@ Kimmy: … Are we friends? I thought you were my babysitter.
 -> OfCourse
 
 =OfCourse
-Dana: Yes! Of course we’re friends! I know we just met yesterday, but… that’s normal!
+Dana: Yes! Of course we’re friends! 
++[Continue]
+->OfCourse1
+
+=OfCourse1
+Dana: I know we just met yesterday, but… that’s normal!
 +[Continue]
 ->OfCourseA
 
@@ -517,22 +631,62 @@ Kimmy: I always thought babysitters were more like parents.
 -> ExplainKimmy
 
 =ExplainKimmy
-Dana: I can be your friend AND your babysitter. We’re having fun playing games together, right? That’s what friends do a lot of the time.
+Dana: I can be your friend AND your babysitter.
++[Continue]
+->ExplainKimmy1
+
+=ExplainKimmy1
+Dana: We’re having fun playing games together, right?
++[Continue]
+->ExplainKimmy2
+
+=ExplainKimmy2
+Dana: That’s what friends do a lot of the time.
 +[Continue]
 ->ExplainKimmyA
 
 =ExplainKimmyA
-Dana: Anthony and I became friends by playing games together. We met playing kickball.
+Dana: Anthony and I became friends by playing games together. 
++[Continue]
+->ExplainKimmyA2
+
+=ExplainKimmyA2
+Dana: We met playing kickball.
 +[Continue]
 ->WhatUWantDonna
 
 =WhatUWantDonna
-Donna: Anthony and his little sister Amber are… annoying. Don’t tell them I said that though…
+Donna: Anthony and his little sister Amber are…
++[Continue]
+->WhatUWantDonna1
+
+=WhatUWantDonna1
+Donna: annoying.
++[Continue]
+->WhatUWantDonna2
+
+=WhatUWantDonna2
+Donna: Don’t tell them I said that though…
 +[Continue]
 ->WhatUWantDonnaA
 
 =WhatUWantDonnaA
-Dana: Really? Anthony and I go to the same school and do sports together sometimes. He’s way nicer than the other boys at my school. I like him and Amber.
+Dana: Really? 
++[Continue]
+->WhatUWantDonnaB
+
+=WhatUWantDonnaB
+Dana: Anthony and I go to the same school and do sports together sometimes.
++[Continue]
+->WhatUWantDonnaC
+
+=WhatUWantDonnaC
+Dana: He’s way nicer than the other boys at my school.
++[Continue]
+->WhatUWantDonnaD
+
+=WhatUWantDonnaD
+Dana: I like him and Amber.
 +[Continue]
 ->DonnaSass
 
@@ -552,12 +706,22 @@ Donna: Oooh, you like... Like him?
 ->DonnaSass2A
 
 =DonnaSass2A
-Dana: …I’m not going to answer that, Donna. Who I like is none of your business.
+Dana: …I’m not going to answer that, Donna. 
++[Continue]
+->DonnaSass2A1
+
+=DonnaSass2A1
+Dana: Who I like is none of your business.
 +[Continue]
 ->VisitFriends
 
 =ThankJimmy
-Kimmy: You’re not bad at games Jimmy... I think you were good.
+Kimmy: You’re not bad at games Jimmy...
++[Continue]
+->ThankJimmy1
+
+=ThankJimmy1
+Kimmy: I think you were good.
 +[Continue]
 ->ThankJimmyA
 
@@ -582,7 +746,12 @@ Jimmy: I save up my money for comics, but I’ve been saving up money for a Yo-y
 ->YayJimmyA
 
 =YayJimmyA
-Kimmy: I don’t have any money but my mom said that’s ok. I do sometimes wish I could buy more toys though...
+Kimmy: I don’t have any money but my mom said that’s ok. 
++[Continue]
+->YayJimmyA1
+
+=YayJimmyA1
+Kimmy: I do sometimes wish I could buy more toys though...
 +[Continue]
 ->SurprisedJimmy
 
@@ -604,10 +773,20 @@ Dana: A little money that your parents give you every week, usually.
 =AllowanceA
 Kimmy: Oh…
 +[Continue]
-->EncourageKimmy2
+->EncourageK2
 
-=EncourageKimmy2
-Dana: Don’t worry, not everyone gets allowance, Kimmy. Friends are better than money anyways, and we’re going to make lots of friends for you!
+=EncourageK2
+Dana: Don’t worry, not everyone gets allowance, Kimmy. 
++[Continue]
+->EncourageK2A
+
+=EncourageK2A
+Dana: Friends are better than money anyways...
++[Continue]
+->EncourageK2B
+
+=EncourageK2B
+Dana: and we’re going to make lots of friends for you!
 +[Continue]
 ->EncourageKimmy2A
 
@@ -627,7 +806,12 @@ Dana: Hi, Dean. This is Kimmy. I’m babysitting her now.
 ->DeanSpeaks
 
 =DeanSpeaks
-Dean: Well lookit that, aren’t you all grown up. You gettin’ paid?
+Dean: Well lookit that, aren’t you all grown up. 
++[Continue]
+->DeanSpeaks1
+
+=DeanSpeaks1
+Dean: You gettin’ paid?
 +[Continue]
 ->DeanSpeaksA
 
@@ -637,22 +821,47 @@ Kimmy: My mom pays Dana a quarter a day.
 ->TellDean
 
 =TellDean
-Dana: That’s right! I’m here to buy some things… I mean, I haven’t gotten paid yet. This is my first day. But I have some money saved up!
+Dana: That’s right! I’m here to buy some things…
++[Continue]
+->TellDean1
+
+=TellDean1
+Dana: I mean, I haven’t gotten paid yet. This is my first day.
++[Continue]
+->TellDean2
+
+=TellDean2
+Dana: But I have some money saved up!
 +[Continue]
 ->TellDeanA
 
 =TellDeanA
-Dean: Hah, I wish I had that kinda discipline. I blew my budget on fabric last week.
+Dean: Hah, I wish I had that kinda discipline.
++[Continue]
+->TellDeanB
+
+=TellDeanB
+Dean: I blew my budget on fabric last week.
 +[Continue]
 ->DanaPlan
 
 =DanaPlan
-Dana: I need to save up money. For college, you know! My mom would get so mad if I didn’t plan ahead.
+Dana: I need to save up money. For college, you know!
++[Continue]
+->DanaPlan2
+
+=DanaPlan2
+Dana: My mom would get so mad if I didn’t plan ahead.
 +[Continue]
 ->DanaPlanA
 
 =DanaPlanA
-Dean: Hah! Your mom’s got the right idea. I wish I’d saved up for college.
+Dean: Hah! Your mom’s got the right idea.
++[Continue]
+-> DeanPlanB
+
+=DeanPlanB
+Dean: I wish I’d saved up for college.
 +[Continue]
 -> ProdDean
 
@@ -662,7 +871,21 @@ Dana: So what did you spend all your money on? Your sewing classes?
 ->ProdDeanA
 
 =ProdDeanA
-Dean: Nah, that’s over. I’m workin’ on some Halloween costumes for my cousins… and some new pants for myself. You know, gotta apply those skills somehow.
+Dean: Nah, that’s over.
++[Continue]
+->ProdDeanB
+
+=ProdDeanB
+Dean: I’m workin’ on some Halloween costumes for my cousins…
++[Continue]
+->ProdDeanC
+
+=ProdDeanC
+Dean: and some new pants for myself.
+->ProdDeanD
+
+=ProdDeanD
+Dean: You know, gotta apply those skills somehow.
 +[Continue]
 ->KimmyClothes
 
@@ -672,17 +895,32 @@ Kimmy: I didn’t know people made clothes!
 ->KimmyClothesA
 
 =KimmyClothesA
-Dean: They do, Kimmy, they do. I make sweaters, dresses, hats--you name it.
+Dean: They do, Kimmy, they do.
++[Continue]
+->KimmyClothesB
+
+=KimmyClothesB
+Dean: I make sweaters, dresses, hats--you name it.
 +[Continue]
 ->SuggestDean
 
 =SuggestDean
-Dana: You should sell your clothes at Jordan Marsh! That’s where I always find the nicest clothes.
+Dana: You should sell your clothes at Jordan Marsh! 
++[Continue]
+->SuggestDean1
+
+=SuggestDean1
+Dana:That’s where I always find the nicest clothes.
 +[Continue]
 ->SuggestDeanA
 
 =SuggestDeanA
-Dean: Hah! That’s a long ways off for me. But maybe someday… anyways, what can I get for ya?
+Dean: Hah! That’s a long ways off for me.
++[Continue]
+->SuggestDean2
+
+=SuggestDean2
+Dean: But maybe someday… anyways, what can I get for ya?
 + [Continue] -> GameMenu
 
 = GameMenu

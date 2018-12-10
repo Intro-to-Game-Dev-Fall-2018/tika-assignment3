@@ -1,5 +1,8 @@
 # Assignment Links
 
+## [Here's the link to the FINAL DRAFT](https://ak5352.itch.io/kimmy-clone-anime-school-student-edition)
+Fixed the button issue and changed the font sizes to be different for each character. Added a character fade-in effect and factory reset. 
+
 ## [Here's the link to Draft 6](https://ak5352.itch.io/kimmy-clone-draft-6)
 Changed the layout and added different audio as well as opening and ending scenes
 

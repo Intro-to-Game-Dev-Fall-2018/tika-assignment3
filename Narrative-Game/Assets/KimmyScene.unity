@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 1482195895}
   - component: {fileID: 1482195893}
   - component: {fileID: 1482195892}
+  - component: {fileID: 1482195894}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -300,6 +301,17 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482195891}
   m_Enabled: 1
+--- !u!114 &1482195894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482195891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8410b7f7767680c4095a99f3f517aa90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1482195895
 Camera:
   m_ObjectHideFlags: 0
@@ -466,7 +478,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
 --- !u!1 &2009679603
@@ -511,11 +523,6 @@ MonoBehaviour:
   playgroundImage: {fileID: 21300000, guid: 47720007845feea488bc9d627413544a, type: 3}
   neighborhoodImage: {fileID: 21300000, guid: bbb751006bea9f14cb35d89db72ef2f1, type: 3}
   storeImage: {fileID: 21300000, guid: eaf5bc0d4e2d2bd44992991c93c90aae, type: 3}
-  danaSound: {fileID: 8300000, guid: b9914c570cbb7084d8ac372bf8a14b21, type: 3}
-  kimmySound: {fileID: 8300000, guid: 0adf74af7ce0a1842b498e3203e0e523, type: 3}
-  jimmySound: {fileID: 8300000, guid: 61d52e3a3cf26d14188699677c6e498b, type: 3}
-  donnaSound: {fileID: 8300000, guid: e7996046a22a31848b0ab3da9e90d1a9, type: 3}
-  deanSound: {fileID: 8300000, guid: b7c62721140686c42b862170cd3057f8, type: 3}
   mainMenuSound: {fileID: 8300000, guid: 7671a515b8c1ccf4389cc397ea5fbb4d, type: 3}
   inkJSONAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   canvas: {fileID: 644021912}
@@ -528,6 +535,24 @@ MonoBehaviour:
   BGimagePrefab: {fileID: 114495121433386554, guid: aaee029ee47ac3c44a9f526ddf321c67,
     type: 2}
   panelPrefab: {fileID: 224612744977865964, guid: 28c42b6bf4b922c4782bbfe94d15d207,
+    type: 2}
+  fcaPrefab: {fileID: 114237424118403386, guid: cb954e8ec849f594ba21ce5b60f40168,
+    type: 2}
+  fcbPrefab: {fileID: 114688867637523464, guid: 242cbe99fcfa3d64e846af6e02855b66,
+    type: 2}
+  fccPrefab: {fileID: 114930583599531280, guid: 5de80287975fad64aae2b3a719a673ad,
+    type: 2}
+  fcdPrefab: {fileID: 114953623206048282, guid: b22fe9e56a34ad44c8aa1f59225702f0,
+    type: 2}
+  thcaPrefab: {fileID: 114639702702135022, guid: 9547ffce63d7c6e46ac57433b6a45a74,
+    type: 2}
+  thcbPrefab: {fileID: 114428660857497842, guid: 73e46ca28381b7b40b2256fa6a324ce7,
+    type: 2}
+  thccPrefab: {fileID: 114641638122730180, guid: 977d274e3e0ee45429713373a49c2086,
+    type: 2}
+  tcaPrefab: {fileID: 114720826500463706, guid: 90a1941522dc88b479c0d11533e6e234,
+    type: 2}
+  tcbPrefab: {fileID: 114831114233647286, guid: f97684828c607084c9425b8e5515f151,
     type: 2}
 --- !u!4 &2009679605
 Transform:
